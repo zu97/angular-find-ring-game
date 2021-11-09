@@ -1,4 +1,5 @@
 <div class="control">
   <p>Tries: {{tries}}</p>
   <button type="button" (click)="reStartGame()">Reset</button>
+  <p *ngIf="isFound">Ring is found. Restart the game.</p>
 </div>

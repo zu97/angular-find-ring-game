@@ -7,6 +7,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class ControlComponent {
   @Input() tries = 0;
+  @Input() isFound = false;
   @Output() restart = new EventEmitter();
 
   reStartGame() {

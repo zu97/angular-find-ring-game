@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class GameComponent {
   cells: { index: number; isShowed: boolean; hasItem: boolean; }[] = [];
   tries = 0;
+  isFound = false;
 
   constructor() {
     this.reStartGame();
@@ -16,6 +17,7 @@ export class GameComponent {
   reStartGame() {
     this.reGenerateFieldCells();
     this.tries = 0;
+    this.isFound = false;
   }
 
   reGenerateFieldCells() {
@@ -40,6 +42,7 @@ export class GameComponent {
     }
 
     this.tries++;
+    this.isFound = cell.hasItem;
     cell.isShowed = true;
   }
 }

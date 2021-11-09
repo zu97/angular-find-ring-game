@@ -1,2 +1,10 @@
-<app-field [cells]="cells" (select)="selectSell($event)"></app-field>
-<app-control [tries]="tries" (restart)="reStartGame()"></app-control>
+<app-field
+  [cells]="cells"
+  [isFound]="isFound"
+  (select)="selectSell($event)"
+></app-field>
+<app-control
+  [tries]="tries"
+  [isFound]="isFound"
+  (restart)="reStartGame()"
+></app-control>

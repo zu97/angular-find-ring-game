@@ -8,6 +8,7 @@ import {Component, Input, Output} from '@angular/core';
 })
 export class FieldComponent {
   @Input() cells: { index: number; isShowed: boolean; hasItem: boolean; }[] = [];
+  @Input() isFound = false;
   @Output() select = new EventEmitter();
 
   getSplitByRows() {
@@ -36,6 +37,10 @@ export class FieldComponent {
   }
 
   selectCell(index: number) {
+    if (this.isFound) {
+      return;
+    }
+
     this.select.emit(index);
   }
 }

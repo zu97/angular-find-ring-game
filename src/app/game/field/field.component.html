@@ -1,1 +1,5 @@
-<p>field works!</p>
+<div class="field">
+  <div class="field-row" *ngFor="let row of getSplitByRows()">
+    <app-cell *ngFor="let cell of row" [cellData]="cell" (click)="selectCell(cell.index)"></app-cell>
+  </div>
+</div>

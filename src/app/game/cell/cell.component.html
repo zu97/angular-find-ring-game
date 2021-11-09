@@ -1,1 +1,3 @@
-<p>cell works!</p>
+<div class="cell" [ngClass]="cellData.isShowed ? 'show' : ''">
+  <span *ngIf="cellData.isShowed && cellData.hasItem">O</span>
+</div>

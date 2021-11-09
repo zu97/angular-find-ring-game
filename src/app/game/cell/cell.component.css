@@ -1,0 +1,20 @@
+.cell {
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.cell:hover {
+  background: #d9d9d9;
+}
+
+.show {
+  background: transparent !important;
+  cursor: default;
+}
